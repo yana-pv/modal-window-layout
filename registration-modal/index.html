@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Регистрация на мероприятие</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    .required-star {
+      color: rgba(138, 143, 168, 1);
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="modal">
+    <div class="modal-header">
+      <h2>Заявка на регистрацию для мероприятия</h2>
+      <button class="modal-close">
+        <span class="close-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.00003 6.58579L4.1716 2.75736L2.75739 4.17157L6.58581 8L2.75739 11.8284L4.1716 13.2426L8.00003 9.41421L11.8285 13.2426L13.2427 11.8284L9.41424 8L13.2427 4.17157L11.8285 2.75736L8.00003 6.58579Z" fill="#21222C"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <form class="modal-form">
+      <div class="form-field">
+        <label class="form-label">Тип мероприятия <span class="required-star">*</span></label>
+        <input type="text" class="form-control" placeholder="Выберете вид мероприятия" required />
+        <div class="form-error">Обязательное поле</div>
+      </div>
+
+      <div class="form-field">
+        <label class="form-label">ФИО <span class="required-star">*</span></label>
+        <input type="text" class="form-control" placeholder="Введите ФИО" required />
+        <div class="form-error">Обязательное поле</div>
+      </div>
+
+      <div class="form-field">
+        <label class="form-label">Имейл <span class="required-star">*</span></label>
+        <input type="email" class="form-control" placeholder="Введите имейл" required />
+        <div class="form-error">Обязательное поле</div>
+      </div>
+
+      <div class="form-field">
+        <label class="form-label">Номер телефона <span class="required-star">*</span></label>
+        <input type="tel" class="form-control" placeholder="+7 777 77 77" required />
+        <div class="form-error">Обязательное поле</div>
+      </div>
+
+      <div id="friendsContainer"></div>
+
+      <div class="add-friend">
+        <button type="button" id="addFriendBtn" class="add-friend-btn">
+          <span class="icon-frame">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.87109 8.8L13.8 8.79999C13.9104 8.79999 14 8.71045 14 8.59999V7.39999C14 7.28954 13.9104 7.19999 13.8 7.19999L8.87109 7.2L8.87109 2.2C8.87109 2.08954 8.78155 2 8.67109 2H7.47109C7.36064 2 7.27109 2.08954 7.27109 2.2V7.2L2.2 7.20001C2.08954 7.20001 2 7.28955 2 7.40001V8.60001C2 8.71047 2.08954 8.80001 2.2 8.80001L7.27109 8.8L7.27109 13.8C7.27109 13.9104 7.36064 14 7.47109 14H8.67109C8.78155 14 8.87109 13.9104 8.87109 13.8L8.87109 8.8Z" fill="#21222C"/>
+            </svg>
+          </span>
+          <span class="btn-text">Добавить друга</span>
+        </button>
+      </div>
+
+      <div class="form-field">
+        <label class="form-label">Предпочитаемый вид связи <span class="required-star">*</span></label>
+
+        <div class="select-wrapper">
+          <select class="form-control custom-select" required>
+            <option value="" disabled selected hidden>Выберите предпочитаемый вид связи</option>
+            <option value="phone">Телефон</option>
+            <option value="email">Email</option>
+            <option value="messenger">Мессенджер</option>
+          </select>
+          
+          <span class="select-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8.85026L11.809 5.12815C11.8879 5.05063 12.0145 5.05063 12.0935 5.12815L12.9394 5.95875C13.0202 6.03816 13.0202 6.16826 12.9394 6.24766L8.14224 10.9402C8.0633 11.0177 7.9367 11.0177 7.85776 10.9402L3.06064 6.24766C2.97979 6.16826 2.97979 6.03816 3.06064 5.95875L3.90652 5.12815C3.98546 5.05063 4.11206 5.05063 4.19101 5.12815L8 8.85026Z" fill="#8A8FA8"/>
+            </svg>
+          </span>
+        </div>
+
+        <div class="form-error">Обязательное поле</div>
+      </div>
+    </form>
+
+    <div class="modal-footer">
+      <button type="button" class="btn-secondary">Назад</button>
+      <button type="submit" class="btn-primary">Дальше</button>
+    </div>
+  </div>
+
+  <script src="popups.js"></script>
+</body>
+</html>
